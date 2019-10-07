@@ -1,9 +1,9 @@
 <?php
 
-    $dbInfo['host']= getenv('REMOTE_ADDR');
-    $dbInfo['user'] = getenv('REMOTE_ADDR');
-    $dbInfo['pass'] = getenv('REMOTE_ADDR');
-    $dbInfo['db'] = getenv('REMOTE_ADDR');
+    $dbInfo['host']= getenv('HOST');
+    $dbInfo['user'] = getenv('USER');
+    $dbInfo['pass'] = getenv('PASS');
+    $dbInfo['db'] = getenv('DB');
 
 	$conn = new mysqli($dbInfo['host'], $dbInfo['user'], $dbInfo['pass'], $dbInfo['db']);
 
