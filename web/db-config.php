@@ -1,4 +1,12 @@
 <?php
+	if (!defined('__ROOT__')) {
+		define('__ROOT__', $_SERVER['DOCUMENT_ROOT']); 
+	}
+	require_once __ROOT__.'/vendor/autoload.php';
+	use Dotenv\Dotenv;
+
+	$dotenv = Dotenv::create(__ROOT__);
+	$dotenv->load();
 
     $dbInfo['host']= getenv('HOST');
     $dbInfo['user'] = getenv('USER');

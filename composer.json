@@ -6,7 +6,9 @@
             "email": "finixlllsarawut@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "vlucas/phpdotenv": "^3.3"
+    },
     "require-dev": {
     	"heroku/heroku-buildpack-php": "*"
   	}
