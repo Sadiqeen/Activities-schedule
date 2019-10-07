@@ -1,0 +1,13 @@
+{
+    "name": "saraw/activities-schedule",
+    "authors": [
+        {
+            "name": "sadiqeen",
+            "email": "finixlllsarawut@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+    	"heroku/heroku-buildpack-php": "*"
+  	}
+}
