@@ -6,11 +6,10 @@
 	require_once __ROOT__.'/vendor/autoload.php';
 	use Dotenv\Dotenv;
 
-	if (file_exists(__DIR__ . '/.env')) {
+	if (file_exists(__ROOT__ . '/.env')) {
 		$dotenv = Dotenv::create(__ROOT__);
 		$dotenv->load();
 	}
-	
 
     $dbInfo['host']= getenv('DB_HOST');
     $dbInfo['user'] = getenv('DB_USER');

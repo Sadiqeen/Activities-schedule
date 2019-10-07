@@ -2,8 +2,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <h3 class="text-center"><b>For Administrator</b></h3><hr><br>
-                <small class="text-danger">Email : admin@admin.com | Pass : 111111</small>
+                <h3 class="text-center"><b>For Administrator</b><br>
+                <small class="text-danger">Email : admin@admin.com | Pass : 111111</small>            
+                </h3>
+                <hr>
                 <form onsubmit="login(event)" method="post">
                     <div class="form-group has-feedback">
                       <input type="text" name="email" id="email" class="form-control" placeholder="Email" required>
