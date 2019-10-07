@@ -16,7 +16,6 @@
     $dbInfo['user'] = getenv('DB_USER');
     $dbInfo['pass'] = getenv('DB_PASS');
     $dbInfo['db'] = getenv('DB_NAME');
-	print_r($dbInfo);
 	$conn = new mysqli($dbInfo['host'], $dbInfo['user'], $dbInfo['pass'], $dbInfo['db']);
 
 	if (mysqli_connect_errno()) {

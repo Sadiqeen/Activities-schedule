@@ -1,9 +1,6 @@
 <?php
-    echo "test1";
     require './db-config.php'; //$conn pdo connect
-    echo "test2";
     require './web-detail.php';
-    echo "test3";
     require './php/ogn.class.php';
 ?>
 <!DOCTYPE html>
