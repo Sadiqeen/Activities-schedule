@@ -1,17 +1,21 @@
 <?php
-	// if (!defined('__ROOT__')) {
-	// 	define('__ROOT__', $_SERVER['DOCUMENT_ROOT']); 
-	// }
-	// require_once __ROOT__.'/vendor/autoload.php';
-	// use Dotenv\Dotenv;
+	if (!defined('__ROOT__')) {
+		define('__ROOT__', $_SERVER['DOCUMENT_ROOT']); 
+	}
 
-	// $dotenv = Dotenv::create(__ROOT__);
-	// $dotenv->load();
+	require_once __ROOT__.'/vendor/autoload.php';
+	use Dotenv\Dotenv;
 
-    $dbInfo['host']= getenv('HOST');
-    $dbInfo['user'] = getenv('USER');
-    $dbInfo['pass'] = getenv('PASS');
-    $dbInfo['db'] = getenv('DB');
+	if (file_exists(__DIR__ . '/.env')) {
+		$dotenv = Dotenv::create(__ROOT__);
+		$dotenv->load();
+	}
+	
+
+    $dbInfo['host']= getenv('DB_HOST');
+    $dbInfo['user'] = getenv('DB_USER');
+    $dbInfo['pass'] = getenv('DB_PASS');
+    $dbInfo['db'] = getenv('DB_NAME');
 	print_r($dbInfo);
 	$conn = new mysqli($dbInfo['host'], $dbInfo['user'], $dbInfo['pass'], $dbInfo['db']);
 
